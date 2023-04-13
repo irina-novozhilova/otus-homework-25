@@ -140,7 +140,7 @@ module.exports = {
   // runner: "jest-runner",
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ["./config/__mocks__/setupFiles.js", "./config/__mocks__/dom.js"],
+  // setupFiles: ["./config/__mocks__/setupFiles.js", "./config/__mocks__/dom.js"],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
@@ -200,4 +200,9 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  preset: "ts-jest",
+  transform: {
+    "^.+\\.ts?$": "ts-jest",
+  },
+  transformIgnorePatterns: ["<rootDir>/node_modules/"],
 };
