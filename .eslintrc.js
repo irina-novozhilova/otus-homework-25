@@ -26,6 +26,7 @@ module.exports = {
     "no-alert": "off",
     "no-promise-executor-return": "off",
     "prefer-destructuring": ["error", { object: true, array: false }],
+    "class-methods-use-this": "off",
   },
   root: true,
   globals: {

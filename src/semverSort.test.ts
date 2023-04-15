@@ -1,8 +1,8 @@
-import semverSort from "./semverSort";
+import SemverSort from "./semverSort";
 
 describe("semverSort", () => {
-  let semver = new semverSort();
-  let inputData: string[] = [
+  const semver = new SemverSort();
+  const inputData: string[] = [
     "1.0.5",
     "2.5.0",
     "0.12.0",
@@ -16,10 +16,10 @@ describe("semverSort", () => {
   });
 
   it("is a function", () => {
-    expect(semverSort).toBeInstanceOf(Function);
+    expect(SemverSort).toBeInstanceOf(Function);
   });
 
-  it("converted data is array ", function () {
+  it("converted data is array ", () => {
     expect(semver.convertInputVersionsToArray(inputData)[0]).toStrictEqual([
       "1",
       "0",
@@ -30,12 +30,12 @@ describe("semverSort", () => {
     );
   });
 
-  it("maxlength of array ", function () {
+  it("maxlength of array ", () => {
     const versions = semver.convertInputVersionsToArray(inputData);
     expect(semver.getMaxLength(versions)).toStrictEqual(8);
   });
 
-  it("sort array versions", function () {
+  it("sort array versions", () => {
     const versions = semver.convertInputVersionsToArray(inputData);
     const sortedVersion = semver.sortVersions(versions);
     expect(sortedVersion).toStrictEqual([
