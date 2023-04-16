@@ -27,6 +27,7 @@ module.exports = {
     "no-promise-executor-return": "off",
     "prefer-destructuring": ["error", { object: true, array: false }],
     "class-methods-use-this": "off",
+    "@typescript-eslint/no-explicit-any": "off",
   },
   root: true,
   globals: {
